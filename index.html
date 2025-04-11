@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title> PROJETO INTEGRADOR </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #000000;
+      padding: 20px 60px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd500;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #3033e4, #000000);
+      color: white;
+      padding: 180px 40px 120px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero .btn {
+      background-color: rgb(255, 252, 252);
+      color: #000000;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: rgb(241, 100, 100);
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: black;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .cards a.card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .cards a.card:hover {
+      transform: translateY(-5px);
+      cursor: pointer;
+    }
+    .ods1:hover{
+        background-color: red;
+        color: white;
+    }
+
+    .ods2:hover{
+      background-color: #a88e0d;
+      color: white;
+    }
+    .ods3:hover{
+      background-color: #3ba83b;
+      color: white;
+    }
+    .ods4:hover{
+      background-color: rgb(156, 3, 3);
+      color: white;
+    }
+
+    .ods5:hover {
+      background-color: #e91e63; /* Vermelho */
+      color: white;
+    }
+    .ods6:hover{
+      background-color: rgb(0, 139, 219);
+      color: white;
+    }
+    .ods7:hover{
+      background-color: yellow;
+      color: white;
+    }
+
+    .ods8:hover {
+      background-color: #5d0b4c; /* Verde escuro */
+      color: white;
+    }
+    .ods9:hover{
+      background-color: orangered;
+      color: white;
+    }
+    .ods10:hover{
+      background-color: pink;
+      color: white;
+    }
+    .ods11:hover{
+      background-color: yellow;
+      color: white;
+    }
+    .ods12:hover{background-color: yellow;
+    color: white;
+    }
+    .ods13:hover {
+      background-color: #006400; /* Roxo */
+      color: white;
+    }
+    .ods14:hover{
+      background-color: blue;
+      color: white;
+    }
+    .ods15:hover{
+      background-color: greenyellow;
+      color: white;
+    }
+    .ods16:hover{
+      background-color: blue;
+      color: white;
+    }
+    .ods17:hover{
+      background-color: #333;
+      color: white;
+    }
+    .jeffs20:hover{
+      background-color: #004aad;
+      color: white;
+    }
+
+    .card h3 {
+      color: rgb(0, 0, 0);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: rgb(0, 0, 0);
+    }
+
+    footer {
+      background-color: #004aad;
+      color: rgb(0, 0, 0);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .social-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-btn a {
+      background-color: #e4405f;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-btn a:hover {
+      background-color: #c13584;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"> FUTURO SUSTENTÁVEL </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#cursos">Objetivos de Desenvolvimento Sustentável.</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>"Transformar o mundo começa com pequenas ações: as ODS são o mapa, e cada um de nós é o caminho."</h1>
+    <p>Compromissos globais que inspiram atitudes locais rumo a um futuro mais justo, sustentável e solidário.</p>
+    <button class="btn" onclick="document.getElementById('cursos').scrollIntoView({ behavior: 'smooth' });">VER ODS</button>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre as ODS </h2>
+    <div class="cards">
+      <div class="card">
+        <h3> Como surgiu? </h3>
+        <p>Em 2015, líderes do mundo todo se reuniram na ONU e firmaram um compromisso: transformar o planeta até 2030. Nasceram assim as ODS — Objetivos de Desenvolvimento Sustentável, com foco em melhorar a vida das pessoas e proteger o meio ambiente.</p>
+      </div>
+      <div class="card">
+        <h3>Educação, Igualdade e Sustentabilidade</h3>
+        <p>As ODS tratam de temas essenciais como educação de qualidade, saúde, igualdade de gênero, energia limpa, trabalho digno e clima. Cada objetivo é uma peça fundamental para um mundo mais justo e equilibrado.</p>
+      </div>
+      <div class="card">
+        <h3>Todos Somos Parte Dessa Mudança</h3>
+        <p>As ODS não são só para governos. Empresas, escolas, comunidades e cada pessoa têm um papel importante. Com pequenas ações, todos podemos contribuir para atingir esses objetivos e construir um futuro melhor para as próximas gerações.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cursos">
+    <h2>Objetivos de Desenvolvimento Sustentável</h2>
+    <div class="cards">
+      <a href="ods1.html" class="card ods1">
+        <h3> ODS 1 </h3>
+        <p> Saiba mais sobre a ODS 1.</p>
+      </a>
+      <a href="ods2.html" class="card ods2">
+        <h3> ODS 2</h3>
+        <p>Saiba mais sobre a ODS 2.</p>
+      </a>
+      <a href="ods3.html" class="card ods3">
+        <h3> ODS 3</h3>
+        <p>Saiba mais sobre a ODS 3.</p>
+      </a>
+      <a href="ods4.html" class="card ods4">
+        <h3> ODS 4</h3>
+        <p>Saiba mais sobre a ODS 4.</p>
+      </a>
+      <a href="ods5.html" class="card ods5">
+        <h3> ODS 5</h3>
+        <p>Saiba mais sobre a ODS 5.</p>
+      </a>
+      <a href="ods6.html" class="card ods6">
+        <h3> ODS 6</h3>
+        <p>Saiba mais sobre a ODS 6.</p>
+      </a>
+      <a href="ods7.html" class="card ods7">
+        <h3> ODS 7</h3>
+        <p>Saiba mais sobre a ODS 7.</p>
+      </a>
+      <a href="ods8.html" class="card ods8">
+        <h3> ODS 8</h3>
+        <p>Saiba mais sobre a ODS 8.</p>
+      </a>
+      <a href="ods9.html" class="card ods9">
+        <h3> ODS 9</h3>
+        <p>Saiba mais sobre a ODS 9.</p>
+      </a>
+      <a href="ods10.html" class="card ods10">
+        <h3> ODS 10</h3>
+        <p>Saiba mais sobre a ODS 10.</p>
+      </a>
+      <a href="ods11.html" class="card ods11">
+        <h3> ODS 11</h3>
+        <p>Saiba mais sobre a ODS 11.</p>
+      </a>
+      <a href="ods12.html" class="card ods12">
+        <h3> ODS 12</h3>
+        <p>Saiba mais sobre a ODS 12.</p>
+      </a>
+      <a href="ods13.html" class="card ods13">
+        <h3> ODS 13</h3>
+        <p>Saiba mais sobre a ODS 13.</p>
+      </a>
+      <a href="ods14.html" class="card ods14">
+        <h3> ODS 14</h3>
+        <p>Saiba mais sobre a ODS 14.</p>
+      </a>
+      <a href="ods15.html" class="card ods15">
+        <h3> ODS 15</h3>
+        <p>Saiba mais sobre a ODS 15.</p>
+      </a>
+       <a href="ods16.html" class="card ods2">
+        <h3> ODS 16</h3>
+        <p>Saiba mais sobre a ODS 16.</p>
+      </a>
+      <a href="ods17.html" class=" card ods17">
+        <h3> ODS 17</h3>
+        <p>Saiba mais sobre a ODS 17</p>
+        </a>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2> Clique no botão abaixo e conheça nosso perfil no instagram!</h2>
+    <p style="text-align: center;"></p>
+    <div class="social-btn">
+      <a href="https://www.instagram.com/planetaconsciente_1?igsh=N29reWswMzQwa3U3" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SENAC - PE. Projeto integrador.</p>
+  </footer>
+
+  <!-- Font Awesome for Instagram icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
